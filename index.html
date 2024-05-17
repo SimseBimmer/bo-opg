@@ -35,40 +35,45 @@
         </section>
     
         <section id="gallery" class="gallery">
-           placer galleri her
+               <section id="favoriteParent">
+                   <div class="div1"><img id="mainImage" src="assets/img/cat1.webp" alt="Choose"></div>
+                   <div class="div2"><img id="imgOne" src="assets/img/cat3.webp" alt="Choose"></div>
+                   <div class="div3"><img id="imgTwo" src="assets/img/cat6.webp" alt="Choose"></div>
+                   <div class="div4"><img id="imgThree" src="assets/img/cat3.webp" alt="Choose"></div>
+                   <div class="div5"><img id="imgFour" src="assets/img/cat1.webp" alt="Choose"></div>
+               </section>
          
         </section>
     
         <section id="adoption" class="adoption-form">
             <h2>Adoptionsformular</h2>
-            <form action="#" method="post">
-                <label for="name">Navn</label>
-                <input type="text" id="name" name="name" >
-    
-                <label for="address">Adresse</label>
-                <input type="text" id="address" name="address" >
-
-                <label for="tlf">telefon</label>
-                <input type="text" id="tlf" name="tlf" >
-    
-                <label for="zipcode">Postnummer</label>
-                <input type="text" id="zipcode" name="zipcode" >
-    
+            <form id="formContainer">
+                <label for="navn">Navn</label>
+                <input type="text" id="navn" name="name" required>
+        
+                <label for="efternavn">Efternavn</label>
+                <input type="text" id="efternavn" name="surname" required>
+        
                 <label for="email">Email</label>
-                <input type="text" id="email" name="email" >
-    
-                <label for="gender">Køn</label>
-                <select id="gender" name="gender">
-                    <option value="han" selected>Han</option>
-                    <option value="hun">Hun</option>
-                    <option value="ikke relevant">Ikke relevant</option>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="alder">Alder</label>
+                <input type="number" id="alder" name="age" required>
+        
+                <label for="interesser">Interesser</label>
+                <select id="interesser" name="interests" required>
+                    <option value="">Vælg en interesse</option>
+                    <option value="svømning">Svømning</option>
+                    <option value="løb">Løb</option>
+                    <option value="cykling">Cykling</option>
                 </select>
-    
-                <button type="submit">Send</button>
+                <button id="submitButton">Tilmeld</button>
             </form>
+            <!-- respons sektion -->
+            <section id="response"></section>
+        
         </section>
-    
-        <section id="cookie-policy" class="cookie-policy">
+        <section id="cookie-policy" class="cookie-policy hidden">
 
             <section class="cookie-policy-container">
             <h2>Cookie Politik</h2>
@@ -83,10 +88,14 @@
                 <label>
                     <input type="checkbox" name="cookies" value="marketing"> Marketing Cookies
                 </label>
-                <button type="submit">Gem Indstillinger</button>
+                <button type="button" id="accept-cookies">Gem Indstillinger</button>
             </form>
         </section>
         </section>
+        
+        
+        
+        
 
     
         <footer>
